@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000
 dotenv.config();
 // middleware
 const corsOptions = {
-    origin: "https://campus-link-ruddy.vercel.app/Adminlogin" 
+    origin: "https://campus-link-hieg.vercel.app" 
 }
 app.use(cors(corsOptions));
 
