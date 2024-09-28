@@ -11,7 +11,7 @@ dotenv.config();
 // middleware
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://campus-link-hieg.vercel.app/',
+  origin: 'https://campus-link-hieg.vercel.app',
 }));
 
 app.use(express.json({ limit: '10mb' }))
