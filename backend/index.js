@@ -1,5 +1,4 @@
 const express = require("express")
-const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 
@@ -10,10 +9,10 @@ const PORT = process.env.PORT || 5000
 
 dotenv.config();
 // middleware
-const corsOptions = {
-    origin: "https://campus-link-hieg.vercel.app" 
-}
-app.use(cors(corsOptions));
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://campus-link-hieg.vercel.app/',
+}));
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
