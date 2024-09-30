@@ -8,14 +8,17 @@ import TeacherDashboard from './pages/teacher/TeacherDashboard';
 import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
-
+import styled from "styled-components";
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
   return (
     <Router>
+      <NameBar>
+        <NameText>Manage your Campus with us✅👍</NameText>
+      </NameBar>
       {currentRole === null &&
-        <Routes>
+        <Routes >
           <Route path="/" element={<Homepage />} />
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route path="/chooseasguest" element={<ChooseUser visitor="guest" />} />
@@ -48,6 +51,22 @@ const App = () => {
       }
     </Router>
   )
+  
 }
+const NameBar = styled.div`
+  width: 100%;
+  background-color: #550080;
+  padding: 16px 0;
+  text-align: center;
+  height:50px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
+`;
+const NameText = styled.h1`
+  color: #ffffff;
+  margin: 0;
+  font-size: 2rem;
+`;
 export default App
