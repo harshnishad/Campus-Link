@@ -7,13 +7,10 @@ import Students from "../assets/GLA.svg";
 import { LightPurpleButton } from "../components/buttonStyles";
 
 const Homepage = () => {
+  
   return (
-    
     <StyledContainer>
-      
-
       <Grid container spacing={0} justifyContent="center" alignItems="center">
-
         <Grid item xs={12} md={6}>
           <StyledImage src={Students} alt="students" />
         </Grid>
@@ -42,6 +39,69 @@ const Homepage = () => {
           </StyledPaper>
         </Grid>
       </Grid>
+
+      <HeroSection>
+        <HeroSectionText>
+          Easy to Manage,<HeroSectionSpan>no work at all</HeroSectionSpan>
+        </HeroSectionText>
+        <HeroSectionFeatures>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/private2.png" alt="private2"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>Secure</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>All Datas are stored in Encrypted form</HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/handshake-heart.png" alt="handshake-heart"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>User Friendly</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>Easy to use And Friendly UI</HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/time--v1.png" alt="time--v1"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>Enable</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>real time attendance processing.</HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/grades.png" alt="grades"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>School Grading</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>Within the Portal students see their marks</HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/windows/50/graph.png" alt="graph"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>Graphical Representation</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>Provide Attendance In Graphical way</HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+          <HeroSectionFeature>
+            <HeroSectionFeatureImageDiv>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/windows8-tablet.png" alt="windows8-tablet"/>
+            </HeroSectionFeatureImageDiv>
+            <HeroSectionFeatureInnerDiv>
+              <HeroSectionFeatureInnertext>Extras</HeroSectionFeatureInnertext>
+              <HeroSectionFeatureInnerpara>Notice,Compalin and many more things </HeroSectionFeatureInnerpara>
+            </HeroSectionFeatureInnerDiv>
+          </HeroSectionFeature>
+
+        </HeroSectionFeatures>
+      </HeroSection>
 
       {/* Founder Section */}
       <FounderSection>
@@ -103,12 +163,14 @@ export default Homepage;
 // Styled components
 
 const StyledContainer = styled(Container)`
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #121212;
+  margin-top:10px;
 `;
 
 const StyledPaper = styled.div`
@@ -177,12 +239,13 @@ const AnimatedButton = styled(LightPurpleButton)`
 // Founder Section styled components
 
 const FounderSection = styled.div`
+  
   padding: 48px 0;
   background-color: #1e1e1e;
   color: #ffffff;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
-  margin-top: 48px;
+  margin-top: 10vh;
 
   @keyframes fadeIn {
     from {
@@ -290,3 +353,62 @@ const FooterText = styled.p`
   margin: 0;
   font-size: 0.9rem;
 `;
+
+// HeroSection
+const HeroSection = styled.div`
+    height: 70vh;
+    width: 100%;
+  `;
+
+  const HeroSectionText = styled.h1`
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+  `;
+  const HeroSectionSpan = styled.span`
+    color: blue;
+  `;
+  const HeroSectionFeatures = styled.div`
+    margin-top:3vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px;
+    
+  
+  `;
+  
+  const HeroSectionFeature = styled.div`
+    padding:10px;
+    margin-top:5vh;
+    background-color: white;
+    border-radius:20px;
+    width:20vw;
+    display:flex;
+    flex-direction:column;
+    height:20vh;
+    animation: fadeIn 1s ease-in-out;
+  
+    @keyframes fadeOut {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  `;
+  const HeroSectionFeatureImageDiv = styled.div`
+   
+  `;
+  const HeroSectionFeatureInnerDiv = styled.div``;
+  const HeroSectionFeatureInnertext = styled.h3`
+   
+  `;
+  const HeroSectionFeatureInnerpara = styled.p`
+    
+  `;
