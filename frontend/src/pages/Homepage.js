@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Box } from "@mui/material";
 import styled from "styled-components";
-
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import { Facebook, GitHub, LinkedIn } from "@mui/icons-material";
 import Students from "../assets/GLA.svg";
 import { LightPurpleButton } from "../components/buttonStyles";
 
@@ -151,9 +153,122 @@ const Homepage = () => {
       </FounderSection>
 
       {/* Footer Section */}
-      <Footer>
-        <FooterText>© 2024 Campus Link. All rights reserved.</FooterText>
-      </Footer>
+      <Box
+      component="footer"
+      sx={{
+        backgroundColor: "#121212", // Set the background to #121212
+        p: 6,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={5}>
+          <Grid item xs={12} sm={4}>
+            <Typography
+              variant="h6"
+              color="white" // Set the header text color to white
+              gutterBottom
+            >
+              About Us
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                color: "gray", // Set body text color to gray for contrast
+              }}
+            >We are XYZ Company, a dedicated team focused on providing high-quality digital solutions to educational institutions. Our goal is to simplify and optimize administrative processes, allowing educators and students to focus more on teaching and learning. We believe in building reliable, scalable, and user-friendly applications that enhance the educational experience.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography
+              variant="h6"
+              color="white" // Set the header text color to white
+              gutterBottom
+            >
+              Contact Us
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                color: "gray", // Set body text color to gray for contrast
+              }}
+            >
+              12/382 Gwaltoli, kanpur, India
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                color: "gray", // Set body text color to gray for contrast
+              }}
+            >
+              Email: harsh.nishad_cs21@gla.ac.in
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                color: "gray", // Set body text color to gray for contrast
+              }}
+            >
+              Phone: +91 8299471328
+            </Typography>
+          </Grid>
+          <Grid item xs={1} sm={4}>
+            <Typography
+              variant="h6"
+              color="white" // Set the header text color to white
+              gutterBottom
+            >
+              Follow Us
+            </Typography>
+            <Link href="https://www.facebook.com/" color="inherit">
+              <Facebook
+                sx={{
+                  color: "white", // Set icons color to white
+                }}
+              />
+            </Link>
+            <Link
+              href="https://www.linkdin.com/harshnishad"
+              color="inherit"
+              sx={{ pl: 1, pr: 1 }}
+            >
+              <LinkedIn
+                sx={{
+                  color: "white", // Set icons color to white
+                }}
+              />
+            </Link>
+            <Link href="https://www.github.com/harshnishad" color="inherit">
+              <GitHub
+                sx={{
+                  color: "white", // Set icons color to white
+                }}
+              />
+            </Link>
+          </Grid>
+        </Grid>
+        <Box mt={5}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            align="center"
+            sx={{
+              color: "gray", // Set the copyright text color to gray
+            }}
+          >
+            {"Copyright © "}
+            <Link color="inherit" href="https://harshnishad.me/">
+              harshnishad
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+        </Box>
+      </Container>
+    </Box>
     </StyledContainer>
   );
 };
@@ -340,19 +455,7 @@ const SocialLink = styled.a`
 `;
 
 // Footer styled components
-const Footer = styled.footer`
-  width: 100%;
-  padding: 16px 0;
-  background-color: #1e1e1e;
-  color: #dcdcdc;
-  text-align: center;
-  position: relative;
-`;
 
-const FooterText = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
-`;
 
 // HeroSection
 const HeroSection = styled.div`
