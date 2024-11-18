@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Container, Grid, Box } from "@mui/material";
 import styled from "styled-components";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import { Facebook, GitHub, LinkedIn } from "@mui/icons-material";
 import Students from "../assets/GLA.svg";
 import { LightPurpleButton } from "../components/buttonStyles";
