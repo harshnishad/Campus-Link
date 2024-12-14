@@ -1,5 +1,5 @@
 # Campus Link
-![Campus Link Banner](https://i.ibb.co/LJ0vt0w/Screenshot-2024-10-01-102422.png?text=Campus+Link+Banner)
+![Campus Link Banner](https://i.ibb.co/F7hX4f9/Screenshot-2024-12-14-113317.png?text=Campus+Link+Banner)
 ## Overview
 
 **Campus Link** is a MERN stack application designed to manage timetables, attendance, and user roles (admin, teacher, student). This application simplifies the administrative processes in educational institutions by providing an efficient platform for managing student information.
@@ -30,7 +30,7 @@
 - **Redux Toolkit:** A state management tool for efficient and scalable app development.
 
 ## Demo
-You can view the live application here: [Campus Link](https://campus-link-hieg.vercel.app/)
+You can view the live application here: [Campus Link](https://campus-link-fronend.vercel.app/)
 
 ## Getting Started
 
